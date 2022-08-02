@@ -1,0 +1,27 @@
+CREATE TABLE _fashion (id INTEGER PRIMARY KEY, name
+TEXT, price INTEGER, barcode INTEGER, aisle INTEGER);
+INSERT INTO q_ fashion VALUES
+(1,"t-shirt",13.99, 205, 3),
+(2, "pants",10, 305, 1),
+(3, "blue pants",10, 306,1),
+(4, "white blouse",13.99, 203,3),
+(5, "adidas shoes", 25, 300, 5),
+(6, "sandals", 19,306,5),
+(7, Loubitans heels",100,305,5),
+(8,"little black dress", 60, 407,2),
+(9,"sundress", 55, 402,2)
+(10, "polkadot t-shirt", 13.09,208,3),
+(11,wide pants", 10,308,1) ,
+(12,"cowboy hat", 7.99,704,4),
+(13,'fedora", 7.99,700,4)
+(14,"baseball cap", 8.99,709,4) ,
+(15, "gardener hat",10,706,4);
+
+--prices ordered by mos expesnives to least
+SELECT * FROM _fashion WHERE price ORDER BY price desc;
+
+--What are the minimum prices for items in the store?
+SELECT MIN(price) FROM(q_fashion);
+
+--what are the amount of items per asile?
+SELECT aisle, SUM(aisle) FROM (q_fashion) GROUP BY aisle;
