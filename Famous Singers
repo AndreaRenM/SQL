@@ -1,0 +1,46 @@
+/* Create table about the people and what they do here */
+CREATE TABLE singers(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+language TEXT,
+age INTEGER,
+birth_place TEXT,
+year_of_first_produced_song INTEGER);
+
+INSERT INTO singers (name,language, age, birth_place,year_of_first_produced_song) VALUES ("Mon Laferte","spanish",39, "Chile",2015);
+INSERT INTO singers (name,language, age, birth_place,year_of_first_produced_song) VALUES ("Natalia Lafourcade","spanish",38, "Mexico",2002);
+INSERT INTO singers (name,language, age, birth_place,year_of_first_produced_song) VALUES ("Laufey","english", 23, "Iceland",2020);
+INSERT INTO singers (name,language, age, birth_place,year_of_first_produced_song) VALUES ("Sierra Ferrell","english", 34,"United States of America",2021);
+
+CREATE TABLE songs(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+language TEXT,
+genre TEXT,
+artist_id INTEGER);
+
+INSERT INTO songs (name,language, genre, artist_id) VALUES ("amarrame", "spanish","pop", 1);
+INSERT INTO songs (name,language, genre, artist_id) VALUES
+("Hasta La Raiz", "spanish", "pop",2);
+INSERT INTO songs (name,language, genre, artist_id) VALUES
+("Tormneto","spanish","pop""folk",1);
+INSERT INTO songs (name,language, genre, artist_id) VALUES
+("Everything I Know About Love","english","modern_jazz",3);
+INSERT INTO songs (name,language, genre, artist_id) VALUES
+("Valentine","english","pop",3);
+INSERT INTO songs (name,language, genre, artist_id) VALUES
+("In Dreams","english","country""folk",4);
+
+CREATE TABLE instruments_played(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+instrument TEXT,
+artist_id INTEGER);
+
+INSERT INTO instruments_played(instrument,artist_id) VALUES
+("guitar""drums""piano""harmonica", 1);
+INSERT INTO instruments_played(instrument,artist_id) VALUES
+("flute""saxophone""guitar""piano",2);
+INSERT INTO instruments_played(instrument,artist_id) VALUES
+("electric guitar""saw""piano""fiddle",4);
+INSERT INTO instruments_played(instrument,artist_id) VALUES
+("piano""guitar""violoncello", 3);
