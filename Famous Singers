@@ -44,3 +44,22 @@ INSERT INTO instruments_played(instrument,artist_id) VALUES
 ("electric guitar""saw""piano""fiddle",4);
 INSERT INTO instruments_played(instrument,artist_id) VALUES
 ("piano""guitar""violoncello", 3);
+
+SELECT singers.name,songs.genre 
+FROM singers
+Join songs
+ON singers.id=songs.artist_id
+GROUP BY singers.name;
+
+SELECT singers.name, instruments_played.instrument
+FROM singers
+JOIN instruments_played
+ON singers.id=instruments_played.artist_id;
+
+SELECT a.name,b.name
+FROM songs
+Join singers a
+ON songs.artist_id=a.id
+Join singers b
+On songs.artist_id=b.id
+GROUP BY songs.language;
